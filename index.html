@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f4">
+  <meta name="description" content="Mensajes llenos de cariño para celebrar los 21 años de Dania.">
+  <title>Felices 21, Amor mío</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-note">Un día especial para alguien aún más especial</div>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Hoy celebramos tu vida</p>
+        <!-- Personaliza aquí el nombre o apodo con el que la llamas. -->
+        <h1 id="page-title">Felices <em>21</em>, Amor mío</h1>
+        <p class="hero-text">Un pequeño espacio para reunir el cariño de quienes te quieren y llevarte de viaje por algunos de los recuerdos de tu vida.</p>
+        <a class="button" href="#mensajes">Leer tus mensajes <span aria-hidden="true">&nbsp;↓</span></a>
+        <a class="scroll-cue" href="#mensajes">Un detalle hecho para ti</a>
+      </div>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="Img/cumpleanera.jpeg" alt="Dania compartiendo un momento con una amiga" fetchpriority="high">
+        <div class="photo-caption">Feliz vida amorcito ♡</div>
+      </div>
+    </section>
+
+    <section class="section memories" id="mensajes" aria-labelledby="messages-title">
+      <div class="section-inner">
+        <header class="section-heading">
+          <p class="eyebrow">De nosotros para ti</p>
+          <h2 id="messages-title">Mensajitos para Dania</h2>
+          <p>Cada foto guarda un recuerdo y cada mensaje, un pedacito del cariño que te tienen.</p>
+        </header>
+        <div class="message-list" id="message-list" aria-label="Mensajes de cumpleaños para Dania"></div>
+        <!-- Cuando recibas más felicitaciones, agrega cada una al arreglo messages del final del archivo. -->
+        <p class="more-messages">Este rincón seguirá creciendo con más mensajes y recuerdos ♡</p>
+      </div>
+    </section>
+
+    <section class="section collage-section" id="recuerdos" aria-labelledby="collage-title">
+      <div class="section-inner">
+        <header class="section-heading">
+          <p class="eyebrow">Una vida llena de momentos</p>
+          <h2 id="collage-title">De chiquita hasta hoy</h2>
+          <p>Un recorrido por tus recuerdos y por todas las personas que han sido parte de tu vida.</p>
+        </header>
+        <div class="collage-grid" id="collage-grid" aria-label="Collage de recuerdos de Dania"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="closing">
+    <div class="closing-inner">
+      <h2 class="closing-title">Que tus 21 sean tan bonitos como tú.</h2>
+      <p class="closing-message">Y bueno, mi gruñosita, espero que te haya gustado este detallito. Quería juntar aquí un poquito del cariño de las personas que te quieren, porque sé lo especial que eres para todos nosotros, y sobre todo para mí. Gracias por compartir tu vida conmigo, por todas las risas, las aventuras y por todo lo que hemos vivido. Ojalá este nuevo año te traiga muchas cosas bonitas y podamos seguir creando recuerdos juntos. Te amo muchísimo, feliz cumpleaños ❤️</p>
+      <span class="closing-divider" aria-hidden="true"></span>
+      <small class="closing-signature">Con mucho cariño, tu noviecito ♡</small>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Cerrar foto ampliada">×</button>
+      <img src="" alt="">
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    // Para agregar otro saludo, duplica un objeto y cambia nombre, foto y texto.
+    // Deja photo como null si aún no hay una imagen que corresponda a esa persona.
+    const messages = [
+      {
+        author: "Javier",
+        photos: ["javier.jpeg", "javierdos.jpeg", "javiertres.jpeg"],
+        text: "¡Feliz cumpleaños, mi gruñosita! ♡\n\nHoy es un día muy especial porque celebramos tu vida, y no quería dejar pasar la oportunidad de recordarte lo importante y especial que eres para mí.\n\nSi algo agradezco de todo este tiempo juntos, es cada una de las aventuras que hemos vivido, los lugares que hemos conocido, las salidas improvisadas, las risas, las ocurrencias y todos esos pequeños momentos que, sin darnos cuenta, se han convertido en recuerdos que guardo con muchísimo cariño.\n\nA veces me pongo a pensar en todo lo que hemos pasado y me da mucha alegría saber que tengo tantas historias bonitas contigo. Desde nuestros momentos más sencillos hasta esas aventuras que terminan convirtiéndose en anécdotas que seguramente seguiremos recordando durante mucho tiempo.\n\nQuiero que sepas que me hace muy feliz compartir esta etapa de mi vida contigo y que todavía nos quedan muchísimos lugares por conocer, experiencias por vivir y recuerdos por crear.\n\nHoy preparé algo especial para ti, porque quería que recibieras un poquito del cariño de todas esas personas que te rodean y que, de alguna manera, hacen tu vida más bonita. Pero antes de que leas sus mensajes, quería que encontraras primero el mío.\n\nDisfruta muchísimo tu día, nunca dejes de ser esa persona tan especial y recuerda que deseo verte cumplir cada uno de tus sueños.\n\n¡Feliz cumpleaños! Te amo muchísimo. ❤️"
+      },
+      {
+        author: "Mamá Rosa",
+        photo: "mama.jpeg",
+        text: "Mounstra, feliz cumpleaños. Quiero que sepas que siempre te voy a querer con todo mi corazón y que deseo verte bien y feliz. Ojalá este año me hagas caso aunque sea un poquito y dejes la terquedad a un lado para cuidar más tu salud; me preocupo mucho por ti porque eres lo más importante para mí.\n\nAunque me duela pensar que algún día tendrás que seguir tu propio camino y estar más lejos de mí, sé que tienes muchísima vida por delante y que vas a lograr todo lo que te propongas. Solo quiero que estés bien, que seas feliz y que nunca dudes de cuánto te ama tu mamá."
+      },
+     {
+        author: "Hermana Itzel",
+        photo: "hermanaItzel.jpeg",
+        text: "Feliz cumpleaños daniiis, ya 21 añotes eso indica que estás más cerca del panteón.\n\nSabes que siempre te deseare lo mejor de lo mejor porque te lo mereces, eres una buena niña aunque un poquito Mensa y se que lograrás lo que te propongas porque eres ese tipo de persona que se estresa si no salen las cosas como quiere jajaja, pero ahorita lo que más te deseo es que este año tengas mucha salud, porque ya estas en la edad en la que te duele la espalda por dormir chueco o te  cansas por subir dos escaleras, que ya no te enfermes a cada rato, que te duren las rodillas y que tu pancita aguante toda la comida de la calle porque nomás no das una hija.\n\nTe quiero un montón, gracias por aguantarme y por ser mi hermana. Que cumplas muchos más hasta que te hagas pasita bien arrugadita.\n\nFelices 21, vieja chiquita."
+      },
+      {
+        author: "Abuelita Trini",
+        photo: "abuelaTrini.jpeg",
+        text: "Feliz cumpleaños mi niña hermosa. Le doy gracias a Dios por tu vida y por la alegría de verte crecer y luchar por tus sueños. Deseo que siempre tengas mucha salud, amor y felicidad."
+      },
+      {
+        author: "Tía Martha",
+        photo: "tiaMartha.jpeg",
+        text: "Mamá, échale los kilos, tú eres chingona. ¿Cómo que por cualquier cosa quieres venirte abajo? ¡No, órale, levántate y échale ganas! Estás muy joven; esas cosas déjalas para las viejas como yo. A ti todavía te queda mucho camino por delante, mamá.",
+        additionalText: "Hoy quiero que sonrías y recuerdes lo mucho que te amo. ¡Feliz cumpleaños! Aunque no pueda abrazarte, mi amor siempre va a acompañarte."
+      },
+      {
+        author: "Tía Tete",
+        photo: "tiaTete.jpeg",
+        text: "Hi mi amor precioso, solo quiero decirte que eres un gran tesoro en mi vida al igual que los demás, un poco defectuosa pero bueno sigues viva :D jaja, Gracias por seguir luchando y terminar tu proposito profesional, ojala cambies tu actitud, tkm.\n\nPD.. Ya no te enfermes, cada día más vieja y siento que ya no damos pa más.\n\nFeliz cumpleaños número xx1."
+      },
+      {
+        author: "Tío Alfredo",
+        photo: "tioAlfredo.jpeg",
+        text: "Chingas a tu madre pd. Feliz día del cartero"
+      },
+      {
+        author: "Tío Miguel",
+        photo: "tioMiguel.jpeg",
+        text: "Hola hija Muchas Felicidades estoy muy feliz de verte cumplir un año mas de vida, pero estoy más feliz de que no te me convertiste en TIDGUER"
+      },
+      {
+        author: "Tía Luz",
+        photo: "tiaLuz.jpeg",
+        text: "Hija muchas muchas Felicidades, Dios te bendiga Hoy, mañana y Siempre, que en todo momento y en todo lugar estes llena de amor, salud, paz y prosperidad, que todos tus sueños y tus anhelos se cumplan, que nunca te falte la fuerza, el caracter, la determinación y la claridad para lograrlo TODO.\n\nRecuerda que eres la suma de TODO EL AMOR que te tenemos, que eres la suma y el resultado de todas y todos los que estamos contigo, que nunca vas sola y QUE Dios y nosotros SIEMPRE vamos a estar contigo.\n\nSi hay que agradecer agradeceremos con el alma por ti, y si hay que pelear y partir madres jajajajaa, pues que te digo. ¡¡¡TE AMO y agradezco a Dios por la oportunidad de tenerte a mi lado, de verte crecer y avanzar cada día.\n\nNUNCA DEJES DE CREER EN TI, Y LUCHAR POR TUS SUEÑOS!!!"
+      },
+      {
+        author: "Flor",
+        photo: "suegaFlor.jpeg",
+        text: "Niña bonita muchas felicidades, dios te cuide y bendiga siempre sabes q te quiero mucho y te deseo lo mejor que cumplas todos tus sueños un fuerte abrazo FELICIDADES 🎁🎉🎂🌹🎈"
+      },
+      {
+        author: "Liz",
+        photo: "cuñadaLiz.jpeg",
+        text: "Feliz cumpleaños Cuñiiiis! 🥳✨\nNo te podré ver hoy en tu día pero te mando un abrazo gigante Cuñis y desearte larga vida, llena de cosas bonitas, mucha salud y momentos increíbles. La verdad es que es un gusto enorme tenerte en la familia cuñis gracias por tu alegría, por ser siempre tan linda y por hacer feliz a mi hermanito🥰\nPasala lindo cuñis, espero que te consientan muchísimo hoy, te mando un abrazo fuerte Cuñis 🎉🎂🥂"
+      },
+      {
+        author: "Alfredo",
+        photo: "amigoAlfredo.jpeg",
+        text: "Amiga Dania espero que este día tan especial la pases increíble y disfrutes mucho con las personas que estén contigo y también espero que el Javi ponga el mensaje completo pq luego lo recorta pero el punto es que quería felicitarte y decirte que aunque se que ya no hablamos tanto como antes aunque te sigo considerando una gran amiga y una gran persona y espero que eso nunca cambia y pueda seguir saliendo contigo y con Javi aunque eso ya lo veremos porque ya van a tomar diferentes caminos porque ya van a graduarse pero espero que te la pases muy bien y te deseo mucha suerte y éxito en todos los planes que tengas"
+      },
+      {
+        author: "Danna",
+        photo: "amigaDanna.jpeg",
+        text: "Dania, volvería a escoger la misma escuela fea con tal de conocerte, aún que siempre estuvimos cerca nuestros caminos se juntaron hasta la prepa y no sabes como agradezco el momento tan preciso en el que la vida te mando, porque nos conocimos para crecer juntas y pasamos de compartir chismes y cosas de niñas a enfrentar cosas más difíciles pero siempre encontrando consuelo en la otra, gracias a esa tarea de danza por unirnos, y gracias a ti por abrirme las puertas de tu casa desde el primer día, te quiero muchísimoooooo y de todo corazón deseo seguir creciendo juntas y seguir aplaudiendo todas tus metas a tu lado. Felices 21 años recuerda disfrutar el proceso aún que parezca difícil, te quiero 🤍🫶"
+      },
+      {
+        author: "Felix",
+        photo: "amigoFelix.jpeg",
+        text: "Feliz cumpleaños compañera, espero la pases muy bien sabes que se te quiere mucho y espero que la pases muy bien con tus seres queridos, te considero una de mis mejores amigas y gracias por tu amistad 🫰🏼💜"
+      },
+      {
+        author: "Karla",
+        photo: "amigaKarla.jpeg",
+        text: "Gracias por tanto, por haberme salvado cuando sentía que ya no podía más, por estar ahí y por ser esa personita que ha acompañado tantas etapas de mi vida. Hemos pasado por tantas cosas juntas, hemos cambiado, crecido y vivido tantas versiones de nosotras, y qué bonito ha sido coincidir contigo en todas ellas. Gracias por no soltarme, por tu amistad y por ser parte de mi historia. Te quiero muchísimo, feliz cumpleaños y siempre voy a agradecer tenerte en mi vida."
+      },
+      {
+        author: "Rodrigo",
+        photo: "amigoRodrigo.jpeg",
+        text: "Feliz cumpleaños, mama Dania 🫂🍰🎉\nTe deseo de todo corazón un año lleno de salud, felicidad y muchos éxitos. Eres una persona maravillosa y me siento muy afortunada de tener tu amistad. Que este nuevo año de tu vida esté lleno de puras cosas buenas.\nCon mucho cariño tu hijo. Muchas felicidades 🎉🎊🎉"
+      },
+      {
+        author: "Yeye",
+        photo: "amigaYeye.jpeg",
+        text: "Dania, gracias por ser siempre esa amiga tan linda que eres, muchas gracias por simplemente existir, a veces dicen que las personas correctas siempre llegan de una manera demasiada inesperada pero son las que realmente importan y tú para mí eres una de ellas, me has ayudado en toda la universidad con tu amistad, con escucharme y muchas veces sacarme de un hoyo donde simplemente no estoy bien, espero siempre seas muy feliz por qué te lo merece, amo verte sonreír y enserio perdóname por no poder estar contigo en tu cumpleaños, me estoy muriendo tanto por dentro como por fuera y ya no aguanto, pero yo no importo, solo importas tú, espero este sea un hermoso cumpleaños, te adoro siempre preciosa, nunca te vayas de mi vida por qué no sabría cómo hacer para pedirte perdón, sería capaz de irme de rodillas hasta donde estés, te amo siempre y gracias por ser esa persona increíble.\nFeliz cumpleaños.❤️🥺"
+      },
+      {
+        author: "Michelle",
+        photo: "amigaMichelle.jpeg",
+        text: "Holi Dania\nFeliz cumpleaños te deseo lo mejor en esta día tan especial.\nCuídate mucho.\nFeliz cumpleaños sigue siendo esa niña linda y no le que eres tqm✨"
+      },
+      {
+        author: "Diego",
+        photo: "amigoDiego.jpeg",
+        text: "Hola Dania compañera espero que te la pases increíble pues en tu cumpleaños que cumplas muchísimos más años al igual que cumplas todas tus metas como también pues los sueños que llegas a tener asimismo cuando se llena a cumplir siempre confía en lo que pues obviamente tu corazón diga y sobre todo pues obviamente que le sigas echando ganas y al igualmente que tu novio te siga apoyando y si no pues si no también le pegas entonces pues ahí estamos ahí cualquier cosa tanto mi novia como yo pues ahí estamos para ayudarte o pues no sé para lo que necesites entonces un saludo y pues un abrazo fuerte cuídate mucho y viajar todo bye"
+      },
+      {
+        author: "Mili",
+        photo: "amigaMili.jpeg",
+        text: "Felíz cumpleaños, Daniaa✨✨.\nQue la pases bien al lado de tus seres queridos, mis mejores deseos para ti, que la vida te llene de bendiciones, aventuras y buenos momentos.\nEres una niña inteligente e increíble, que este año te traiga todo lo que tu corazón desea, que se cumplan tus sueños.\nTe quiero mucho y nuevamente\n¡feliz cumpleaños!🫶🏻✨"
+      },
+      {
+        author: "Julian",
+        photo: "amigoJulian.jpeg",
+        text: "¡Feliz cumpleaños, Dania! Espero que tengas un día increíble, lleno de alegría y momentos bonitos. Te deseo lo mejor hoy y siempre, que cumplas muchos años más y que todos tus sueños se hagan realidad. ¡Disfruta mucho tu día!"
+      },
+      {
+        author: "Beto",
+        photo: "amigoBeto.jpeg",
+        text: "¡Feliz cumpleaños! 🥳🎉 Espero que te la pases muy bonito en tu día, que disfrutes mucho y que este nuevo año de vida esté lleno de cosas buenas, éxitos y momentos felices. Te deseo lo mejor hoy y siempre. ¡Que cumplas muchos años más! 🎂✨"
+      },
+      {
+        author: "Luis",
+        photo: null,
+        text: "Feliz cumpleaños, Daniaa! Espero que hoy tengas un día increíble, lleno de momentos bonitos, muchas sonrisas y personas que te quieren. Que esta nueva etapa de tu vida venga acompañada de muchas bendiciones, éxitos y experiencias inolvidables. Te deseo lo mejor hoy y siempre, que todos tus sueños y metas se vayan cumpliendo. ¡Pásala muy bonito y disfruta muchísimo tu día! 🎂"
+      }
+    ];
+
+    const collagePhotos = [
+      "uno.jpeg", "dos.jpg", "tres.jpg", "cuatro.jpg", "cinco.jpg", "seis.jpg", "siete.jpg", "ocho.jpg",
+      "nueve.jpg", "diez.jpeg", "omce.jpeg", "doce.jpeg", "trece.jpeg", "catorce.jpeg", "quince.jpeg",
+      "dieciseis.jpeg", "diecisiete.jpeg", "dieciocho.jpeg", "diecinueve.jpeg", "veinte.jpeg", "veintiuno.jpeg",
+      "veintidos.jpeg", "veintitres.jpeg", "veinticuatro.jpeg", "veinticinto.jpeg", "veintiseis.jpeg",
+      "veintisiete.jpeg", "veintiocho.jpeg", "veintinueve.jpeg", "treinta.jpeg", "treintauno.jpeg",
+      "treintados.jpeg", "treintatres.jpeg", "treintacuatro.jpeg", "treintacinco.jpeg", "treintasiete.jpeg",
+      "treintaocho.jpeg", "treintanueve.jpeg", "cuarenta.jpeg", "cuarentauno.jpeg", "cuarentados.jpeg", "cuarentatres.jpeg",
+      "cuarentacuatro.jpeg", "cicuentauno.jpeg", "cincuentados.jpeg", "cincuentatres.jpeg", "cincuentacuatro.jpeg",
+      "cincuentacinco.jpeg", "cincuentaseis.jpeg", "cincuentasiete.jpeg", "cincuentaocho.jpeg",
+      "cincuentanueve.jpeg", "sesenta.jpeg", "sesentauno.jpeg", "sesentados.jpeg", "sesentatres.jpeg",
+      "sesentacuatro.jpeg", "sesentacinco.jpeg", "sesentasiete.jpeg", "sesentaocho.jpeg", "setentanueve.jpeg",
+      "cumple.jpg", "ochenta.jpeg", "ochentauno.jpeg", "ochentados.jpeg", "ochentatres.jpeg",
+      "ochentacuatro.jpeg", "ochentacinto.jpeg", "ochentaseis.jpeg", "ochentasiente.jpeg",
+      "ochentaocho.jpeg", "ochentanueva.jpeg", "noventa.jpeg", "noventauno.jpeg", "noventados.jpeg",
+      "noventatres.jpeg", "dormida.jpeg"
+    ];
+
+    const messageList = document.querySelector("#message-list");
+    const collageGrid = document.querySelector("#collage-grid");
+    const lightbox = document.querySelector("#lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+    const closeButton = lightbox.querySelector(".lightbox-close");
+    let previouslyFocusedElement;
+
+    messages.forEach(({ author, photo, photos, text, additionalText }) => {
+      const card = document.createElement("article");
+      card.className = "message-card";
+      if (photos?.length) card.classList.add("message-card--photo-gallery");
+
+      const photoFrame = document.createElement("figure");
+      photoFrame.className = "message-photo";
+
+      if (photos?.length) {
+        photoFrame.classList.add("message-photo--gallery");
+        const gallery = document.createElement("div");
+        gallery.className = "message-photo-gallery";
+
+        photos.forEach((photoName, index) => {
+          const button = document.createElement("button");
+          button.className = "photo-button";
+          button.type = "button";
+          button.setAttribute("aria-label", `Ampliar foto ${index + 1} de Dania con ${author}`);
+
+          const image = document.createElement("img");
+          image.src = `Img/${photoName}`;
+          image.alt = `Dania con ${author}, foto ${index + 1}`;
+          image.loading = "lazy";
+          image.decoding = "async";
+
+          button.append(image);
+          button.addEventListener("click", () => openLightbox(image, `Recuerdo ${index + 1} de Dania con ${author}`));
+          gallery.append(button);
+        });
+
+        photoFrame.append(gallery);
+      } else if (photo) {
+        const button = document.createElement("button");
+        button.className = "photo-button";
+        button.type = "button";
+        button.setAttribute("aria-label", `Ampliar foto de Dania con ${author}`);
+
+        const image = document.createElement("img");
+        image.src = `Img/${photo}`;
+        image.alt = `Dania con ${author}`;
+        image.loading = "lazy";
+        image.decoding = "async";
+
+        button.append(image);
+        photoFrame.append(button);
+
+        button.addEventListener("click", () => openLightbox(image, `Un recuerdo de Dania con ${author}`));
+      } else {
+        // Deja el espacio de Luis listo para agregar su foto cuando esté disponible.
+        const placeholder = document.createElement("div");
+        placeholder.className = "photo-pending";
+        placeholder.innerHTML = "<span aria-hidden=\"true\">♡</span><span>Un recuerdo por agregar</span>";
+        photoFrame.append(placeholder);
+      }
+
+      const copy = document.createElement("div");
+      copy.className = "message-copy";
+
+      const heading = document.createElement("h3");
+      heading.className = "message-author";
+      heading.textContent = `De ${author}`;
+
+      const message = document.createElement("p");
+      message.className = "message-text";
+      message.textContent = text;
+
+      copy.append(heading, message);
+      if (additionalText) {
+        const additionalMessage = document.createElement("p");
+        additionalMessage.className = "message-text";
+        additionalMessage.textContent = additionalText;
+        copy.append(additionalMessage);
+      }
+      card.append(photoFrame, copy);
+      messageList.append(card);
+    });
+
+    function sizeMessagePhotoGalleries() {
+      const isMobile = window.matchMedia("(max-width: 760px)").matches;
+
+      document.querySelectorAll(".message-card--photo-gallery").forEach((card) => {
+        const photoFrame = card.querySelector(".message-photo--gallery");
+        const messageCopy = card.querySelector(".message-copy");
+        photoFrame.style.height = isMobile ? "" : `${messageCopy.getBoundingClientRect().height}px`;
+      });
+    }
+
+    sizeMessagePhotoGalleries();
+    window.addEventListener("resize", sizeMessagePhotoGalleries);
+
+    collagePhotos.forEach((photo, index) => {
+      const button = document.createElement("button");
+      button.className = "collage-item";
+      button.type = "button";
+      button.setAttribute("aria-label", `Ampliar recuerdo ${index + 1}`);
+
+      const image = document.createElement("img");
+      image.src = `Collage/${photo}`;
+      image.alt = `Recuerdo ${index + 1} de Dania`;
+      image.loading = "lazy";
+      image.decoding = "async";
+
+      button.append(image);
+      button.addEventListener("click", () => openLightbox(image, `Recuerdo ${index + 1} de Dania`));
+      collageGrid.append(button);
+    });
+
+    function openLightbox(image, caption) {
+      previouslyFocusedElement = document.activeElement;
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = caption;
+      lightbox.hidden = false;
+      closeButton.focus();
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+      previouslyFocusedElement?.focus();
+    }
+
+    closeButton.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  </script>
+</body>
+</html>
